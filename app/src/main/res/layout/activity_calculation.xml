@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Calculation">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/calculation_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+    <EditText
+        android:id="@+id/editTextWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calculation_toolbar"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Weight (grams)"
+        android:inputType="numberDecimal"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/edit_text"/>
+
+    <EditText
+        android:id="@+id/editTextType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextWeight"
+        android:layout_marginTop="8dp"
+        android:hint="Enter Type (Keep/Wear)"
+        android:inputType="text"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/edit_text"/>
+
+    <EditText
+        android:id="@+id/editTextValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextType"
+        android:layout_marginTop="8dp"
+        android:hint="Enter Current Gold Value / gram (RM)"
+        android:inputType="numberDecimal"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/edit_text"/>
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextValue"
+        android:layout_marginTop="16dp"
+        android:text="Calculate"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button"/>
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonCalculate"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"/>
+</RelativeLayout>
